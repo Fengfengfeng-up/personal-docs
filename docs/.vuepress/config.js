@@ -1,7 +1,6 @@
 // const { path } = require('@vuepress/shared-utils')
 
 module.exports = ctx => ({
-  dest: './vuepress',
   title: 'Freesims',
   description: '记录个人前端技术成长点滴',
   head: [
