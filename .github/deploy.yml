@@ -1,0 +1,21 @@
+name: Deployment
+on: push
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        # 你要操作的目标仓库
+        TARGET_REPO: Fengfengfeng-up/Fengfengfeng-up.github.io
+        # 构建结果存储的分支
+        TARGET_BRANCH: master
+        # 要使用的构建命令
+        BUILD_SCRIPT: yarn && yarn build
+        # 构建结果存储目录
+        BUILD_DIR: vuepress
