@@ -4,11 +4,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    #- name: Checkout
-    #  uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@master
 
     - name: Build and Deploy
-      run: ./deploy.sh
+      run: /deploy.sh
       shell: bash
       # uses: jenkey2011/vuepress-deploy@master # vuepress 部署的action
       #env:
