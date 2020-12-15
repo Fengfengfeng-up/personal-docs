@@ -8,10 +8,10 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: jenkey2011/vuepress-deploy@master # vuepress 部署的action
+      # uses: jenkey2011/vuepress-deploy@master # vuepress 部署的action
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        TARGET_REPO: Fengfengfeng-up/Fengfengfeng-up.github.io
-        TARGET_BRANCH: master
-        BUILD_SCRIPT: yarn && yarn build
-        BUILD_DIR: docs/.vuepress/dist/
+        #TARGET_REPO: Fengfengfeng-up/Fengfengfeng-up.github.io
+        #TARGET_BRANCH: master
+        BUILD_SCRIPT: yarn deploy
+        #BUILD_DIR: docs/.vuepress/dist/
