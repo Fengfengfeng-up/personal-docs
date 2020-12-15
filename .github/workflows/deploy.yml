@@ -11,8 +11,8 @@ jobs:
       run: ./deploy.sh
       shell: bash
       # uses: jenkey2011/vuepress-deploy@master # vuepress 部署的action
-      #env:
-        #ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         #TARGET_REPO: Fengfengfeng-up/Fengfengfeng-up.github.io
         #TARGET_BRANCH: master
         #BUILD_SCRIPT: yarn deploy
