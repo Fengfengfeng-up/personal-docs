@@ -4,14 +4,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+    #- name: Checkout
+    #  uses: actions/checkout@master
 
     - name: Build and Deploy
+      run: ./.github/scripts/deploy.sh
+      shell: bash
       # uses: jenkey2011/vuepress-deploy@master # vuepress 部署的action
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      #env:
+        #ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         #TARGET_REPO: Fengfengfeng-up/Fengfengfeng-up.github.io
         #TARGET_BRANCH: master
-        BUILD_SCRIPT: yarn deploy
+        #BUILD_SCRIPT: yarn deploy
         #BUILD_DIR: docs/.vuepress/dist/
