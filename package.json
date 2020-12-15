@@ -20,5 +20,6 @@
     "@vuepress/theme-vue": "^1.7.1",
     "vue-toasted": "^1.1.28",
     "vuepress-plugin-flowchart": "^1.4.3"
-  }
+  },
+  "homepage": "https://Fengfengfeng-up.github.io/personal-docs"
 }
