@@ -11,7 +11,7 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'build: deploy personal docs'
 
 git push -f git@github.com:Fengfengfeng-up/Fengfengfeng-up.github.io.git master
 

@@ -28,7 +28,7 @@
   "homepage": "https://Fengfengfeng-up.github.io/personal-docs",
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "pre-push": "bash deploy.sh"
     }
   }
 }
