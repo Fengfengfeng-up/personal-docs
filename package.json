@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.6",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.0",
     "vuepress": "^1.7.1"
@@ -22,5 +25,10 @@
     "vue-toasted": "^1.1.28",
     "vuepress-plugin-flowchart": "^1.4.3"
   },
-  "homepage": "https://Fengfengfeng-up.github.io/personal-docs"
+  "homepage": "https://Fengfengfeng-up.github.io/personal-docs",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
 }
