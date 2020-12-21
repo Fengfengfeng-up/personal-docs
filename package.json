@@ -1,21 +1,47 @@
 {
-  "name": "fh-personal-doc",
+  "name": "docs",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "description": "docs of VuePress",
+  "keywords": [
+    "documentation"
+  ],
+  "homepage": "https://Fengfengfeng-up.github.io/personal-docs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fengfengfeng-up/personal-docs.git"
+  },
   "license": "MIT",
+  "author": "Feng Han",
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@textlint-rule/textlint-rule-no-unmatched-pair": "^1.0.7",
     "husky": "^4.3.6",
     "node-sass": "^5.0.0",
+    "remark-cli": "^9.0.0",
+    "remark-lint": "^8.0.0",
+    "remark-preset-lint-consistent": "^4.0.0",
+    "remark-preset-lint-recommended": "^5.0.0",
     "sass-loader": "^10.1.0",
+    "textlint": "^11.7.6",
+    "textlint-filter-rule-comments": "^1.2.2",
+    "textlint-rule-apostrophe": "^2.0.0",
+    "textlint-rule-common-misspellings": "^1.0.1",
+    "textlint-rule-diacritics": "^1.0.0",
+    "textlint-rule-en-capitalization": "^2.0.3",
+    "textlint-rule-stop-words": "^2.0.7",
+    "textlint-rule-terminology": "^2.1.4",
+    "textlint-rule-write-good": "^1.6.2",
     "vuepress": "^1.7.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "dev:w": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "lint-md": "yarn lint-md:style && yarn lint-md:wording",
+    "lint-md:style": "remark .",
+    "lint-md:wording": "textlint ./docs/**/*.md"
   },
   "dependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
@@ -25,7 +51,6 @@
     "vue-toasted": "^1.1.28",
     "vuepress-plugin-flowchart": "^1.4.3"
   },
-  "homepage": "https://Fengfengfeng-up.github.io/personal-docs",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
