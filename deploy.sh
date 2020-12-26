@@ -17,8 +17,8 @@ git add -A
 git commit -m 'build: deploy personal docs'
 
 git push -f git@github.com:Fengfengfeng-up/Fengfengfeng-up.github.io.git master
-echo '已推送至github'
-git push -f git@gitee.com:striveforus/gitee-page.git master
-echo '已推送至gitee'
+echo 'Github Pages已更新'
+git push -f git@gitee.com:striveforus/striveforus.git master
+echo 'Gitee Pages已更新'
 
 cd -
