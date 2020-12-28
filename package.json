@@ -2,7 +2,7 @@
   "name": "docs",
   "version": "1.0.0",
   "private": true,
-  "description": "docs of VuePress",
+  "description": "personal docs",
   "keywords": [
     "documentation"
   ],
@@ -37,7 +37,7 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "dev:w": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
+    "watch": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev docs",
     "build": "vuepress build docs",
     "lint-md": "yarn lint-md:style && yarn lint-md:wording",
     "lint-md:style": "remark .",
@@ -50,6 +50,9 @@
     "@vuepress/theme-vue": "^1.7.1",
     "vue-toasted": "^1.1.28",
     "vuepress-plugin-flowchart": "^1.4.3"
+  },
+  "resolutions": {
+    "watchpack": "1.6.1"
   },
   "husky": {
     "hooks": {
