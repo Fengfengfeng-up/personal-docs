@@ -19,7 +19,6 @@ module.exports = ctx => ({
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     smoothScroll: true,
-    // logo: '/logo.png',
     nav: [
       { text: 'JavaScript', link: '/my-docs/js/' },
       // { text: 'TypeScript', link: '/my-docs/ts/' },
@@ -31,7 +30,7 @@ module.exports = ctx => ({
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
     sidebar: {
-      '/my-docs/js/': getJsSidebar('基础部分', '进阶部分')
+      '/my-docs/js/': getJsSidebar('基础总结', '进阶')
     },
     lastUpdated: '上次更新',
   },
@@ -42,19 +41,6 @@ module.exports = ctx => ({
     //   updatePopup: true
     // }],
     ['@vuepress/medium-zoom', true],
-    // ['@vuepress/google-analytics', {
-    //   ga: 'UA-128189152-1'
-    // }],
-    // ['container', {
-    //   type: 'vue',
-    //   before: '<pre class="vue-container"><code>',
-    //   after: '</code></pre>'
-    // }],
-    // ['container', {
-    //   type: 'upgrade',
-    //   before: info => `<UpgradePath title="${info}">`,
-    //   after: '</UpgradePath>'
-    // }],
     // ['flowchart']
   ],
   configureWebpack: {
@@ -64,10 +50,6 @@ module.exports = ctx => ({
       },
     },
   },
-  // extraWatchFiles: [
-  //   './.vuepress'
-  // ],
-  // evergreen: true, // 禁止 ESNext 到 ES5 的转译以及对 IE 的 polyfills，同时会带来更快的构建速度和更小的文件体积
 })
 
 function getJsSidebar (groupA, groupB) {
@@ -80,12 +62,12 @@ function getJsSidebar (groupA, groupB) {
         'basic-types'
       ]
     },
-    {
-      title: groupB,
-      collapsable: false,
-      children: [
-        'design-mode'
-      ]
-    }
+    // {
+    //   title: groupB,
+    //   collapsable: false,
+    //   children: [
+    //     'design-mode'
+    //   ]
+    // }
   ]
 }
