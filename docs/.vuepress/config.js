@@ -26,6 +26,7 @@ module.exports = ctx => ({
       // { text: 'Vue', link: '/my-docs/vue/' },
       // { text: 'Webpack', link: '/my-docs/webpack/' },
       // { text: 'NestJs', link: '/my-docs/nestjs/' },
+      // { text: '力扣刷题', link: '/my-docs/leetcode/' },
       { text: '收藏', link: '/my-docs/collection/' },
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
@@ -59,6 +60,7 @@ function getJsSidebar (groupA, groupB) {
       collapsable: false,
       children: [
         '',
+        'what-is-javascript',
         'basic-types'
       ]
     },
