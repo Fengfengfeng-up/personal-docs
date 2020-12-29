@@ -42,7 +42,7 @@ module.exports = ctx => ({
     //   updatePopup: true
     // }],
     ['@vuepress/medium-zoom', true],
-    // ['flowchart']
+    ['flowchart']
   ],
   configureWebpack: {
     resolve: {
