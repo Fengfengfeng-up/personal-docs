@@ -29,4 +29,6 @@
 * [你不知道的JavaScript（上卷）](https://www.ituring.com.cn/book/1488)
 * [你不知道的JavaScript（中卷）](https://www.ituring.com.cn/book/1563)
 * [JavaScript设计模式与开发实践](https://www.ituring.com.cn/book/1632)
-
+* [A brief history of JavaScript](https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17) Ben Aston, Apr 2, 2015
+* [JavaScript brief history and ECMAScript(ES6,ES7,ES8,ES9) features](https://medium.com/@madasamy/javascript-brief-history-and-ecmascript-es6-es7-es8-features-673973394df4#:~:text=ECMAScript%20is%20the%20%E2%80%9Cstandard%20for%E2%80%9D%20of%20the%20JavaScript,the%20years%20javascript%20has%20changed%20through%20ECMAScript%2C%20) Madasamy M, Mar 10, 2018
+* [ECMAScript | 维基百科](https://zh.wikipedia.org/wiki/ECMAScript)
