@@ -1546,13 +1546,6 @@
     vuepress-plugin-container "^2.0.2"
     vuepress-plugin-smooth-scroll "^0.0.3"
 
-"@vuepress/theme-vue@^1.7.1":
-  version "1.7.1"
-  resolved "https://registry.npm.taobao.org/@vuepress/theme-vue/download/@vuepress/theme-vue-1.7.1.tgz#76e1c6b5bb33b8f7d9c9c2e52104b932b4903e7e"
-  integrity sha1-duHGtbszuPfZycLlIQS5MrSQPn4=
-  dependencies:
-    "@vuepress/theme-default" "1.7.1"
-
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.9.0.tgz?cache=0&sync_timestamp=1601756233286&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40webassemblyjs%2Fast%2Fdownload%2F%40webassemblyjs%2Fast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
