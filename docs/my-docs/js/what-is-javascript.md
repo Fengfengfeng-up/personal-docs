@@ -1,4 +1,4 @@
-# 什么是JavaScript
+# 什么是 JavaScript
 
 ## 基本概念
 
