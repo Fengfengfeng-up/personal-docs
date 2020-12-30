@@ -67,6 +67,7 @@ function getJsSidebar (groupA, groupB) {
       children: [
         '',
         'what-is-javascript',
+        'javascript-in-html',
         'basic-types'
       ]
     },
