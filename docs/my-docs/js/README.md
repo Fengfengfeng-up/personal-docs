@@ -1,6 +1,6 @@
 # 写在前面
 
-近年来，随着科学技术的高速发展，前端技术也在持续不断地更新迭代:zap:。迄今为止，前端领域已经衍生出了最受欢迎和广泛应用的三大 **Javascript** 框架——[Vue](https://cn.vuejs.org/)、[React](https://react.docschina.org/)、[Angular](https://angular.cn/)。不久前，[Svelte](https://www.sveltejs.cn/) 也以一种全新的构建用户界面的方法出现在人们的视野中，俘获了众多前端开发人员的青睐。
+近年来，随着科学技术的高速发展，前端技术也在持续不断地更新迭代:zap:。迄今为止，前端领域已经衍生出了最受欢迎和广泛应用的三大 **JavaScript** 框架——[Vue](https://cn.vuejs.org/)、[React](https://react.docschina.org/)、[Angular](https://angular.cn/)。不久前，[Svelte](https://www.sveltejs.cn/) 也以一种全新的构建用户界面的方法出现在人们的视野中，俘获了众多前端开发人员的青睐。
 
 综上所述，前端技术更替速度确实非常快，快到令我们直呼学不动了:sweat_smile:。但作为一名合格的前端工程师，我们又不得不去拥抱这些变化，因此我们必须清楚地认识到，无论再强大的框架，也是通过最基础的标识符拓展而来。简而言之，万变不离其宗，所以我们唯有牢牢地掌握 **JavaScript**、**HTML**、**CSS** 基础，在面对这些层出不穷的新技术时才能以不变应万变:punch:。也正因为如此，我们必须将 **JavaScript** 这块骨头一点点啃完消化:muscle:。
 
