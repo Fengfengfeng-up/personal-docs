@@ -14,8 +14,8 @@
 
 **基础总结**
 
-* [什么是JavaScript](./what-is-javascript.md)
-* [基本概念](./basic-types.md)
+* [什么是 JavaScript](./what-is-javascript.md)
+* [HTML 中的 JavaScript](./javascript-in-html.md)
 
 **进阶**
   
