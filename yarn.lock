@@ -5129,6 +5129,11 @@ ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
   resolved "https://registry.npm.taobao.org/ini/download/ini-1.3.8.tgz?cache=0&sync_timestamp=1607907874824&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fini%2Fdownload%2Fini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha1-op2kJbSIBvNHZ6Tvzjlyaa8oQyw=
 
+install-artifact-from-github@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/install-artifact-from-github/download/install-artifact-from-github-1.2.0.tgz#adcbd123c16a4337ec44ea76d0ebf253cc16b074"
+  integrity sha1-rcvRI8FqQzfsROp20OvyU8wWsHQ=
+
 internal-ip@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npm.taobao.org/internal-ip/download/internal-ip-4.3.0.tgz?cache=0&sync_timestamp=1605885503627&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Finternal-ip%2Fdownload%2Finternal-ip-4.3.0.tgz#845452baad9d2ca3b69c635a137acb9a0dad0907"
@@ -5141,6 +5146,11 @@ ip-regex@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/ip-regex/download/ip-regex-2.1.0.tgz?cache=0&sync_timestamp=1601334379393&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fip-regex%2Fdownload%2Fip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
   integrity sha1-+ni/XS5pE8kRzp+BnuUUa7bYROk=
+
+ip-regex@^4.1.0:
+  version "4.2.0"
+  resolved "https://registry.npm.taobao.org/ip-regex/download/ip-regex-4.2.0.tgz?cache=0&sync_timestamp=1601334379393&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fip-regex%2Fdownload%2Fip-regex-4.2.0.tgz#a03f5eb661d9a154e3973a03de8b23dd0ad6892e"
+  integrity sha1-oD9etmHZoVTjlzoD3osj3QrWiS4=
 
 ip@^1.1.0, ip@^1.1.5:
   version "1.1.5"
@@ -6486,7 +6496,7 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
-nan@^2.12.1, nan@^2.13.2:
+nan@^2.12.1, nan@^2.13.2, nan@^2.14.2:
   version "2.14.2"
   resolved "https://registry.npm.taobao.org/nan/download/nan-2.14.2.tgz?cache=0&sync_timestamp=1602591646310&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnan%2Fdownload%2Fnan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
   integrity sha1-9TdkAGlRaPTMaUrJOT0MlYXu6hk=
@@ -6540,7 +6550,7 @@ node-forge@^0.10.0:
   resolved "https://registry.npm.taobao.org/node-forge/download/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
   integrity sha1-Mt6ir7Ppkm8C7lzoeUkCaRpna/M=
 
-node-gyp@^7.1.0:
+node-gyp@^7.1.0, node-gyp@^7.1.2:
   version "7.1.2"
   resolved "https://registry.npm.taobao.org/node-gyp/download/node-gyp-7.1.2.tgz?cache=0&sync_timestamp=1602898431160&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-gyp%2Fdownload%2Fnode-gyp-7.1.2.tgz#21a810aebb187120251c3bcec979af1587b188ae"
   integrity sha1-IagQrrsYcSAlHDvOyXmvFYexiK4=
@@ -7818,6 +7828,15 @@ rc@^1.2.8:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+re2@^1.15.4:
+  version "1.15.9"
+  resolved "https://registry.npm.taobao.org/re2/download/re2-1.15.9.tgz#9ed16171edcb0bc4f0e239bf55229ff3f26acbe3"
+  integrity sha1-ntFhce3LC8Tw4jm/VSKf8/Jqy+M=
+  dependencies:
+    install-artifact-from-github "^1.2.0"
+    nan "^2.14.2"
+    node-gyp "^7.1.2"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -9536,6 +9555,13 @@ textlint-filter-rule-comments@^1.2.2:
   resolved "https://registry.npm.taobao.org/textlint-filter-rule-comments/download/textlint-filter-rule-comments-1.2.2.tgz#3a72c494994e068e0e4aaad0f24ea7cfe338503a"
   integrity sha1-OnLElJlOBo4OSqrQ8k6nz+M4UDo=
 
+textlint-filter-rule-urls@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/textlint-filter-rule-urls/download/textlint-filter-rule-urls-1.0.1.tgz#06607503fab3d973916f461d3f9c01e0b303a5e8"
+  integrity sha1-BmB1A/qz2XORb0YdP5wB4LMDpeg=
+  dependencies:
+    url-regex-safe "^1.0.2"
+
 textlint-rule-apostrophe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/textlint-rule-apostrophe/download/textlint-rule-apostrophe-2.0.0.tgz#2a2d8ce02428e2c487fa5e3f0a2b3b776ef348a9"
@@ -9709,6 +9735,11 @@ tiny-emitter@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/tiny-emitter/download/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
   integrity sha1-HRpW7fxRxD6GPLtTgqcjMONVVCM=
+
+tlds@^1.209.0:
+  version "1.215.0"
+  resolved "https://registry.npm.taobao.org/tlds/download/tlds-1.215.0.tgz#9f7c32d9c575fe7342c97be35b452b89c55c74a2"
+  integrity sha1-n3wy2cV1/nNCyXvjW0UricVcdKI=
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -10254,6 +10285,15 @@ url-parse@^1.4.3, url-parse@^1.4.7:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+url-regex-safe@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/url-regex-safe/download/url-regex-safe-1.0.2.tgz#822cbab107d7f4f80342f0f0798acf63cac9fd1d"
+  integrity sha1-giy6sQfX9PgDQvDweYrPY8rJ/R0=
+  dependencies:
+    ip-regex "^4.1.0"
+    re2 "^1.15.4"
+    tlds "^1.209.0"
 
 url@^0.11.0:
   version "0.11.0"
