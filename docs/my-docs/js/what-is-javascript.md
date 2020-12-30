@@ -25,11 +25,11 @@
 ## 主要结构
 
 * **ECMAScript**：**JavaScript** 的核心，作为基准和规范，由 [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 定义。
-* **DOM**（文档对象模型）：提供与网页内容交互的方法和接口。
-* **BOM**（浏览器对象模型）：提供与浏览器交互的方法和接口。
+* [DOM（文档对象模型）](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction)：提供与网页内容交互的方法和接口。
+* [BOM（浏览器对象模型）](https://developer.mozilla.org/zh-CN/docs/Web/API/Window)：提供与浏览器交互的方法和接口。
 
 ::: tip 提示
-**DOM** 和 **BOM** 依赖 **JavaScript** 宿主环境，一般为浏览器。
+**DOM** 和 **BOM** 依赖 **JavaScript** 宿主环境，一般是浏览器。
 :::
 
 ## 发展历史
