@@ -41,6 +41,12 @@ module.exports = ctx => ({
     //   serviceWorker: true,
     //   updatePopup: true
     // }],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'G-ELVB952QC9'
+      }
+    ],
     ['@vuepress/medium-zoom', true],
     ['flowchart']
   ],
