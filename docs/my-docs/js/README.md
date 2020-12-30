@@ -7,8 +7,7 @@
 近期我正在二刷 [JavaScript高级程序设计（第4版）](https://www.ituring.com.cn/book/2472)，对 **JavaScript** 知识点重新进行同步梳理总结，形成知识体系，所以这部分主要记录个人对现代 **JavaScript** 的理解和基础概括，以及一些进阶用法总结。
 
 ::: warning 温馨提示
-本人水平有限，文中如有不妥的地方，请及时指出，欢迎提 Issues、Pr。
-
+本人水平有限，文中如有不妥的地方，请及时指出，欢迎提 Issues、Pr。  
 如果本文档对你有所帮助，烦请移步 [GitHub](https://github.com/Fengfengfeng-up/personal-docs) 点个:star:，感谢！:pray:
 :::
 ## 目录结构
