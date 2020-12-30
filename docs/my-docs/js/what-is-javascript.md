@@ -4,29 +4,31 @@
 
 **JavaScript** 是一种轻量级解释型脚本语言，能够实现复杂的计算与交互，包括闭包、匿名（lambda）函数，甚至元编程等特性。
 
-### 特点
+### 主要特点
 
 * 依赖宿主环境。
 * 动态，灵活，可拓展性强。
 * 与 **HTML**、**CSS** 完全集成。
 * 主流浏览器默认支持和开启。
-* 易上手，难掌握。
-  
+* 易上手，难掌握。  
+  ......
+
 ### 应用范围
 
 * 桌面浏览器
 * 手机浏览器
 * 屏幕阅读器
 * 服务器构建
-* 移动端应用
+* 移动端应用  
+  ......
 
-## 主要构成
+## 主要结构
 
-* **ECMAScript**：**JavaScript** 的核心，作为一个基准和规范，以便在它之上再构建更稳健的脚本语言，由 [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 定义。
+* **ECMAScript**：**JavaScript** 的核心，作为基准和规范，由 [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 定义。
 * **DOM**（文档对象模型）：提供与网页内容交互的方法和接口。
 * **BOM**（浏览器对象模型）：提供与浏览器交互的方法和接口。
 
-::: warning 提示
+::: tip 提示
 **DOM** 和 **BOM** 依赖 **JavaScript** 宿主环境，一般为浏览器。
 :::
 
@@ -56,7 +58,7 @@ e=>end: 来日方长，未来可期
 st->stage1->stage2->stage3->stage4->stage5->stage6->stage7->stage8->stage9->stage10->stage11->stage12->stage13->stage14->stage15->stage16->stage17->e
 @flowend
 
-::: tip 前沿
+::: tip 前沿信息
 最新的规范草案请点击 <https://tc39.es/ecma262/>。  
-如想了解最新的功能，包括“即将纳入规范的”（所谓的 “stage 3”），请点击<https://github.com/tc39/proposals>。
+最新功能，包括“即将纳入规范的”（“stage 3”），请点击<https://github.com/tc39/proposals>。
 :::
