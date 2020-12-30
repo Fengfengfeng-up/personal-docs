@@ -55,3 +55,8 @@ e=>end: 来日方长，未来可期
 
 st->stage1->stage2->stage3->stage4->stage5->stage6->stage7->stage8->stage9->stage10->stage11->stage12->stage13->stage14->stage15->stage16->stage17->e
 @flowend
+
+::: tip 前沿
+最新的规范草案请点击 <https://tc39.es/ecma262/>。  
+如想了解最新的功能，包括“即将纳入规范的”（所谓的 “stage 3”），请点击<https://github.com/tc39/proposals>。
+:::
