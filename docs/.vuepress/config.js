@@ -31,7 +31,7 @@ module.exports = ctx => ({
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
     sidebar: {
-      '/my-docs/js/': getJsSidebar('基础总结', '进阶')
+      '/my-docs/js/': getJsSidebar('基础', '进阶')
     },
     lastUpdated: '上次更新',
   },
@@ -68,7 +68,7 @@ function getJsSidebar (groupA, groupB) {
         '',
         'what-is-javascript',
         'javascript-in-html',
-        'basic-types'
+        'language-basics',
       ]
     },
     // {
