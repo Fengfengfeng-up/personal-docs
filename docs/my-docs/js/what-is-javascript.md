@@ -8,7 +8,7 @@
 
 * 依赖宿主环境。
 * 动态，灵活，可拓展性强。
-* 与 **HTML**、**CSS** 完全集成。
+* 与 HTML、CSS 完全集成。
 * 主流浏览器默认支持和开启。
 * 易上手，难掌握。  
   ......
@@ -24,13 +24,13 @@
 
 ## 主要结构
 
-* **ECMAScript**：**JavaScript** 的核心，作为基准和规范，由 [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 定义。
+* **ECMAScript**：JavaScript 的核心，作为基准和规范，由 [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm) 定义。
 * [DOM（文档对象模型）](https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model/Introduction)：提供与网页内容交互的方法和接口。
 * [BOM（浏览器对象模型）](https://developer.mozilla.org/zh-CN/docs/Web/API/Window)：提供与浏览器交互的方法和接口。
 
 ::: tip 提示
 
-**DOM** 和 **BOM** 依赖 **JavaScript** 宿主环境，一般是浏览器。
+DOM 和 BOM 依赖 JavaScript 宿主环境，一般是浏览器。
 
 :::
 
@@ -63,6 +63,6 @@ st->stage1->stage2->stage3->stage4->stage5->stage6->stage7->stage8->stage9->stag
 ::: tip 前沿信息
 
 最新的规范草案请点击 <https://tc39.es/ecma262/>。  
-最新功能，包括“即将纳入规范的”（“stage 3”），请点击<https://github.com/tc39/proposals>。
+最新功能，包括即将纳入规范的（stage 3），请点击<https://github.com/tc39/proposals>。
 
 :::
