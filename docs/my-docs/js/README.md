@@ -13,7 +13,7 @@
 :::
 ## 目录结构
 
-**基础总结**
+**基础**
 
 * [什么是 JavaScript](./what-is-javascript.md)
 * [HTML 中的 JavaScript](./javascript-in-html.md)
