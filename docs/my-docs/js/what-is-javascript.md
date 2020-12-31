@@ -29,7 +29,9 @@
 * [BOM（浏览器对象模型）](https://developer.mozilla.org/zh-CN/docs/Web/API/Window)：提供与浏览器交互的方法和接口。
 
 ::: tip 提示
+
 **DOM** 和 **BOM** 依赖 **JavaScript** 宿主环境，一般是浏览器。
+
 :::
 
 ## 发展历史
@@ -59,6 +61,8 @@ st->stage1->stage2->stage3->stage4->stage5->stage6->stage7->stage8->stage9->stag
 @flowend
 
 ::: tip 前沿信息
+
 最新的规范草案请点击 <https://tc39.es/ecma262/>。  
 最新功能，包括“即将纳入规范的”（“stage 3”），请点击<https://github.com/tc39/proposals>。
+
 :::
