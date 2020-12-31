@@ -17,6 +17,7 @@
 
 * [什么是 JavaScript](./what-is-javascript.md)
 * [HTML 中的 JavaScript](./javascript-in-html.md)
+* [语言基础](./language-basics.md)
 
 **进阶**
   
