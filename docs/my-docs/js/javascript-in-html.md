@@ -4,18 +4,18 @@
 
 在 **JavaScript** 早期，Netscape 公司创造出了 `<script>` 元素，用以将 **JavaScript** 插入到 **HTML** 页面中，现已加入 **HTML** 规范。它主要有以下属性和特点。
 
-### 属性
+### 可选属性
 
-| 属性名       | 是否必填  | 默认值   |  用途                         | 作用脚本类型             |
-| :---------: | :-------: | :--:    | :---------------------------: | :---------------------: |
-| async       | 否        | `false` | 异步执行脚本                   | 外部                     |
-| charset     | 否        | `""`    | 指定代码字符集（不常用）        | 外部 / 行内              |
-| crossorigin | 否        | `null`  | 配置请求的 **CORS** 设置       | 外部                     |
-| defer       | 否        | `false` | 推迟执行脚本                   | 外部 / 行内（ IE7 及以下）|
-| integrity   | 否        | `""`    | 检查获取的资源是否被篡改        | 外部                     |
-| language    | 已废弃     |         | ~~表示代码块中的脚本语言~~     |                          |
-| src         | 否        | `""`    | 表示要执行的外部文件地址        | 外部                     |
-| type        | 否        | `""`    | 表示脚本语言的 [MIME 类型](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)    | 外部 / 行内              |
+| 属性名       |  默认值   |  用途                             | 作用脚本类型             |
+| :---------: |  :--:    | :-------------------------------: | :---------------------: |
+| async       |  `false` | 异步执行脚本                       | 外部                    |
+| charset     |  `""`    | 指定代码字符集（不常用）            | 外部 / 行内              |
+| crossorigin |  `null`  | 配置请求的 **CORS** 设置           | 外部                     |
+| defer       |  `false` | 推迟执行脚本                       | 外部 / 行内（ IE7 及以下）|
+| integrity   |  `""`    | 检查获取的资源是否被篡改            | 外部                     |
+| language    |          | ~~表示代码块中的脚本语言~~ （已废弃）|                         |
+| src         |  `""`    | 表示要执行的外部文件地址            | 外部                     |
+| type        |  `""`    | 表示脚本语言的 [MIME 类型](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)                          | 外部 / 行内              |
 
 ### 特点
 
@@ -45,7 +45,5 @@
 
 * 尽可能将 **JavaScript** 代码放在外部文件中，按需通过 `<script>` 标签对 **JavaScript** 代码进行分发，比如 [Content Delivery Network (CDN)](https://www.cdnetworks.com/what-is-a-cdn/)。
 * 最好将 `<script>` 标签放在 `<body>` 元素中的页面内容后面，防止阻塞浏览器，以减少白屏时间。
-* 尽量不使用异步脚本，如使用则不应该在加载期间修改 **DOM**，因为页面可能还未渲染完。
-* 通过 **DOM** API 添加的非异步脚步最好在文档头部显示声明 `<link rel="preload" href="xxx.js">` 标签，以减少性能影响。
-  
-
+* 尽量不使用异步脚本，如需使用则最好不要在加载期间修改 **DOM**，因为页面可能还未渲染完。
+* 通过 **DOM** API 添加的脚本可以通过显式设置 `async` 属性值为 `false` 改为同步脚本，此时最好在文档头部显示声明 `<link rel="preload" href="xxx.js">` 标签，以减少它带来的性能影响。
