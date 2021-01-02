@@ -1,4 +1,4 @@
-# Vue-juejin-comment
+# vue-juejin-comment
 
 一个[掘金](https://juejin.im/timeline)风格的**评论组件**✍。  
 
