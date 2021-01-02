@@ -1,13 +1,15 @@
 # Vue-juejin-comment
 
-一个[掘金](https://juejin.im/timeline)风格的评论组件✍。 
+一个[掘金](https://juejin.im/timeline)风格的**评论组件**✍。  
+
+GitHub 地址：<https://github.com/Fengfengfeng-up/vue-comment-component/tree/main>
 
 ## 功能
 
-* ✅支持评论、回复操作。
-* ✅支持点赞、删除操作。
-* ✅支持上传（复制）图片，表情输入。
-* ✅自适应高度输入框。
+* ✅ 支持评论、回复操作。
+* ✅ 支持点赞、删除操作。
+* ✅ 支持上传（复制）图片，表情输入。
+* ✅ 自适应高度输入框。
 
 ## 安装
 
