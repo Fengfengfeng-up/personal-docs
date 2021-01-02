@@ -27,11 +27,13 @@ module.exports = ctx => ({
       // { text: 'Webpack', link: '/my-docs/webpack/' },
       // { text: 'NestJs', link: '/my-docs/nestjs/' },
       // { text: '力扣刷题', link: '/my-docs/leetcode/' },
-      { text: '收藏', link: '/my-docs/collection/' },
+      { text: '开源库', link: '/my-docs/library/vue-juejin-comment.html' },
+      // { text: '收藏', link: '/my-docs/collection/' },
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
     sidebar: {
-      '/my-docs/js/': getJsSidebar('基础', '进阶')
+      '/my-docs/js/': getJsSidebar('基础', '进阶'),
+      '/my-docs/library/': getLibSidebar('Vue')
     },
     lastUpdated: '上次更新',
   },
@@ -78,5 +80,17 @@ function getJsSidebar (groupA, groupB) {
     //     'design-mode'
     //   ]
     // }
+  ]
+}
+
+function getLibSidebar (groupA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        'vue-juejin-comment',
+      ]
+    },
   ]
 }
