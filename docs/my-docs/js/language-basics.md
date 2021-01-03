@@ -68,14 +68,193 @@ function doSomething() {
 }
 ```
 
-<!-- ### 变量
+### 变量
 
-ECMAScript 变量是松散类型的，可以用于保存任何类型的数据。有 3 个关键字用于声明变量：`var`、`const` 和 `let`。
+ECMAScript 变量是松散类型的，可以保存任何类型的数据。有 3 个关键字用于声明变量：`var`、`const` 和 `let`。  
 
-#### var 关键字 -->
+#### var
 
-<!-- ::: tip 最佳实践
+使用 `var` 关键字声明变量：
 
-借助 [ESlint](http://eslint.cn/) 代码检查工具可以高效地帮助我们正确书写 JavaScript 代码。
+``` js
+var a
+console.log(a) // undefined 不初始化的情况下，变量会保存特殊值 undefined
 
-::: -->
+var b = 'foo' // 声明变量并初始化，b 被定义为一个保存字符串值 foo 的变量
+b = 1 // 不仅可以改变变量保存的值，也可以改变值的类型
+
+// 一条语句中声明多个变量
+var c = 'bar',
+  d = 2,
+  e
+
+// 重复声明会被合并为一个声明
+var name = 'neal'
+var name
+```
+
+* 声明作用域  
+  在函数中使用 `var` 声明的变量会成为该函数的局部变量，因此该变量在函数退出时会被销毁。
+
+  ``` js
+  function test() {
+    var a = 'hi' // 局部变量
+  }
+
+  test() 
+  console.log(a) // ReferenceError: a is not define
+  ```
+
+* 声明提升  
+  使用 `var` 声明的变量会被提升到所在作用域的顶部。
+
+  ``` js
+  console.log(obj) // undefined
+  var obj
+
+  function foo() {
+    console.log(age); // undefined
+    var age = 26;
+  }
+
+  foo();  
+  ```
+
+* 全局声明  
+  浏览器环境下，在全局作用域中使用 `var` 声明的变量会成为 [window](https://developer.mozilla.org/zh-CN/docs/Web/API/Window) 对象的属性。
+
+  ``` js
+  var age = 1
+  console.log(window.age) // 1
+  ```
+
+#### let
+
+`let` 跟 `var` 的作用相似，但有以下重要区别。
+
+* `let` 声明的范围是块级作用域。  
+  
+  ``` js
+  if (true) {
+    var name = 'neal'
+    console.log(name) // neal
+  }
+  console.log(name) // neal
+
+  if (true) {
+    let name = 'feng'
+    console.log(name) // feng
+  } 
+  console.log(name) // ReferenceError: name is not define
+  ```
+
+* `let` 不允许同一个块作用域中出现冗余声明。  
+  
+  ``` js
+  var name
+  let name // SyntaxError: Identifier 'name' has already been declared
+  
+  let age
+  let age // SyntaxError: Identifier 'name' has already been declared 
+  ```
+
+* `let` 声明的变量不会在作用域中被提升。  
+  在 let 声明之前的执行瞬间被称为“暂时性死区”，这时引用任何后面才声明的变量都会抛出 ReferenceError。
+
+  ``` js
+  console.log(name) // ReferenceError: Cannot access 'name' before initialization
+  let name
+  ```
+
+* 浏览器环境中，使用`let` 在全局作用域声明的变量不会成为 window 对象的属性。  
+  
+  ``` js
+  let age = 18
+  console.log(window.age) // undefined
+  ```
+
+* 使用 `let` 声明变量不能依赖条件声明模式。  
+  因为 `let` 的作用域是块，所以无法检查前面是否已经使用 let 声明过同名变量，也无法在没有声明的情况下声明它。
+
+  ``` js
+  try {
+    console.log(a)
+  } catch(error) {
+    let a // 变量 a 被限制在 catch {}块的作用域内
+  }
+  a = 1 // 这个赋值形同全局赋值
+  ```
+
+* for 循环中的 `let` 声明  
+  使用 `let` 声明迭代变量时，引擎在后台会为每个迭代循环声明一个新的迭代变量。`let` 不仅会将这个变量绑定到 `for` 循环的块中，还会将它重新绑定到循环的每一个迭代中，并使用上一个循环迭代结束时的值重新进行赋值。
+
+  ``` js
+  for (var i = 1; i < 6; i++) {
+    setTimeout(() => console.log(i), 0)
+  }
+  // 依次输出 6、 6、 6、 6、 6
+  console.log(i) // 6
+
+  for (let j = 1; j < 6; j++) {
+    setTimeout(() => console.log(j), 0)
+  }
+  // 依次输出 1、 2、 3、 4、 5
+  console.log(j) // ReferenceError: j is not defined
+
+  for (var k = 1; k < 6; k++) {
+    let i = k
+    setTimeout(() => console.log(i), 0)
+  }
+  // 依次输出 1、 2、 3、 4、 5
+  console.log(i) // ReferenceError: i is not defined
+  ```
+
+#### const
+
+`const` 的行为与 `let` 基本相同，区别是用它声明变量时必须同时初始化变量，且尝试修改 `const` 声明的变量会导致运行时错误。
+
+``` js
+const a = 1
+a = 2 // TypeError: Assignment to constant variable.
+```
+
+* `const` 声明的限制只适用于它指向的变量的引用。
+
+``` js
+const person = {};
+person.name = 'neal'; // 不会报错 
+```
+
+::: details 在函数中，如果去掉声明语句的关键字，该变量会变为全局变量，在函数外部也能访问到。
+
+``` js
+function test() {
+  a = 'hi' // 局部变量
+}
+
+test() 
+console.log(a) // hi
+```
+
+:::
+
+::: details 严格模式下，如果在函数中给未声明的变量赋值，会抛出 ReferenceError（引用错误）。
+
+``` js
+function test() {
+  'use strict'
+  a = 'hi' // ReferenceError: a is not define
+}
+
+test()
+```
+
+:::
+
+::: tip 最佳实践
+
+* 尽量不用行为怪异的 `var`。
+* 优先使用 `const`，其次使用 `let`。  
+* 借助 [ESlint](http://eslint.cn/) 代码检查工具可以高效地帮助我们规范书写 JavaScript 代码。
+
+:::
