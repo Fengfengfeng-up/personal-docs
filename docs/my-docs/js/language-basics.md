@@ -1,3 +1,6 @@
+---
+sidebarDepth: 2
+---
 # 语言基础
 
 ## 语法
@@ -159,7 +162,7 @@ var name
   ```
 
 * `let` 声明的变量不会在作用域中被提升。  
-  在 let 声明之前的执行瞬间被称为“暂时性死区”，这时引用任何后面才声明的变量都会抛出 ReferenceError。
+  在 let 声明之前的执行瞬间被称为“暂时性死区”，这时引用任何后面才声明的变量都会抛出 ReferenceError（引用错误）。
 
   ``` js
   console.log(name) // ReferenceError: Cannot access 'name' before initialization
@@ -238,7 +241,7 @@ console.log(a) // hi
 
 :::
 
-::: details 严格模式下，如果在函数中给未声明的变量赋值，会抛出 ReferenceError（引用错误）。
+::: details 严格模式下，如果在函数中给未声明的变量赋值，会抛出 ReferenceError。
 
 ``` js
 function test() {
