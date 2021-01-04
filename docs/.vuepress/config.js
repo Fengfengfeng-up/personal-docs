@@ -26,14 +26,15 @@ module.exports = ctx => ({
       // { text: 'Vue', link: '/my-docs/vue/' },
       // { text: 'Webpack', link: '/my-docs/webpack/' },
       // { text: 'NestJs', link: '/my-docs/nestjs/' },
-      // { text: '力扣刷题', link: '/my-docs/leetcode/' },
+      { text: 'LeetCode刷题', link: '/my-docs/leetcode/' },
       { text: '开源库', link: '/my-docs/library/vue-juejin-comment.html' },
       // { text: '收藏', link: '/my-docs/collection/' },
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
-    sidebar: {
+    sidebar: { 
       '/my-docs/js/': getJsSidebar('基础', '进阶'),
-      '/my-docs/library/': getLibSidebar('Vue')
+      '/my-docs/library/': getLibSidebar('Vue'),
+      '/my-docs/leetcode/': getLeetcodeSidebar('LeetCode刷题'),
     },
     lastUpdated: '上次更新',
   },
@@ -90,6 +91,20 @@ function getLibSidebar (groupA) {
       collapsable: false,
       children: [
         'vue-juejin-comment',
+      ]
+    },
+  ]
+}
+
+function getLeetcodeSidebar (groupA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        '',
+        'two-sum',
+        // 'median-of-two-sorted-arrays',
       ]
     },
   ]
