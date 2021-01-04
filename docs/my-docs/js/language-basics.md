@@ -398,7 +398,7 @@ console.log(3 / -0); // -Infinity
 
 console.log(isFinite('')) // true 空字符串或仅有空格的字符串会被视为 0
 console.log(isFinite(Number.NEGATIVE_INFINITY)) // false Number.NEGATIVE_INFINITY 存储的是 -Infinity
-console.log(isFinite(Number.POSITIVE_INFINITY)) // false Number.NEGATIVE_INFINITY 存储的是 Infinity
+console.log(isFinite(Number.POSITIVE_INFINITY)) // false Number.POSITIVE_INFINITY 存储的是 Infinity
 ```
 
 #### NaN
