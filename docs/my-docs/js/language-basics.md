@@ -71,11 +71,11 @@ function doSomething() {
 }
 ```
 
-### 变量
+## 变量
 
 ECMAScript 变量是松散类型的，可以保存任何类型的数据。有 3 个关键字用于声明变量：`var`、`const` 和 `let`。  
 
-#### var
+### var
 
 使用 `var` 关键字声明变量：
 
@@ -131,7 +131,7 @@ var name
   console.log(window.age) // 1
   ```
 
-#### let
+### let
 
 `let` 跟 `var` 的作用相似，但有以下重要区别。
 
@@ -205,14 +205,14 @@ var name
   console.log(j) // ReferenceError: j is not defined
 
   for (var k = 1; k < 6; k++) {
-    let i = k
-    setTimeout(() => console.log(i), 0)
+    let l = k
+    setTimeout(() => console.log(l), 0)
   }
   // 依次输出 1、 2、 3、 4、 5
-  console.log(i) // ReferenceError: i is not defined
+  console.log(l) // ReferenceError: l is not defined
   ```
 
-#### const
+### const
 
 `const` 的行为与 `let` 基本相同，区别是用它声明变量时必须同时初始化变量，且尝试修改 `const` 声明的变量会导致运行时错误。
 
