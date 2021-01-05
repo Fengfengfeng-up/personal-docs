@@ -104,6 +104,7 @@ function getLeetcodeSidebar (groupA) {
       children: [
         '',
         'two-sum',
+        'add-two-numbers'
         // 'median-of-two-sorted-arrays',
       ]
     },
