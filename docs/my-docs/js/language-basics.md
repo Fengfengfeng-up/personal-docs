@@ -625,4 +625,158 @@ console.log(String.raw`\u00A9`); // \u00A9
 console.log(String.raw`first line\nsecond line`); // "first line\nsecond line" 
 ```
 
-<!-- ### Symbol 类型 -->
+### Symbol 类型
+
+Symbol（符号）是 ECMAScript 6 新增的数据类型，用于创建唯一标识符。
+
+#### 基本用法
+
+使用 `Symbol()` 函数可以初始化一个 Symbol，同时可以传入一个字符串参数作为对该符号的描述。
+
+``` js
+let symbol1 = Symbol('fff')
+console.log(typeof symbol1) // "symbol"
+console.log(symbol1) // Symbol(fff)
+console.log(symbol1.description) // "fff"
+
+// 不能将 Symbol() 函数作为构造函数使用
+let symbol2 = new Symbol() // TypeError: Symbol is not a constructor
+
+// 可以使用 Object() 函数包装 Symbol
+let symbol3 = Object(Symbol())
+console.log(symbol3) // Symbol {Symbol()}
+console.log(typeof symbol3) // "object"
+```
+
+#### 全局 Symbol
+
+可以在全局 Symbol 注册表中创建全局 Symbol，以供代码其他部分共享和重用。使用 `Symbol.for()` 方法可以从注册表中读取（不存在则创建) Symbol，需要传入一个字符串（非字符串会转为字符串）作为键。
+
+``` js
+// 读取失败，创建全局 Symbol
+let globalSymbol1 = Symbol.for('fff');
+console.log(typeof globalSymbol1); // "symbol" 
+
+// 读取全局 Symbol
+let globalSymbol2 = Symbol.for('fff');
+console.log(globalSymbol1 === globalSymbol2); // true
+
+// 再次读取全局 Symbol
+let globalSymbol3 = Symbol.for({
+  toString() {
+    return 'fff'
+  },
+})
+
+console.log(globalSymbol1 === globalSymbol3); // true
+```
+
+使用 `Symbol.keyFor()` 方法可以查询全局注册表，返回传入的全局 Symbol 对应的字符串键。如果查询的不是全局 Symbol，则返回 `undefined`；如果传入参数不是 Symbol，则返回，则抛出 TypeError。
+
+``` js
+let globalSymbol = Symbol.for('js') // 全局符号
+console.log(Symbol.keyFor(globalSymbol)) // "js"
+
+let symbol = Symbol('css') // 普通符号
+console.log(Symbol.keyFor(symbol)) // "undefined"
+
+console.log(Symbol.keyFor(1)) // TypeError: 1 is not a symbol
+```
+
+#### 使用 Symbol 作为属性
+
+凡是可以使用字符串或数值作为属性的地方，都可以使用 Symbol。
+
+``` js
+let symbol1 = Symbol('a')
+let symbol2 = Symbol('b')
+let symbol3 = Symbol('c')
+let symbol4 = Symbol('d')
+
+let obj = {
+  [symbol1]: 'A',
+}
+
+Object.defineProperty(obj, symbol2, {
+  value: 'B',
+})
+
+Object.defineProperties(obj, {
+  [symbol3]: {
+    value: 'C',
+  },
+  [symbol4]: {
+    value: 'D',
+  },
+})
+
+console.log(obj) // {Symbol(a): "A", Symbol(b): "B", Symbol(c): "C", Symbol(d): "D"}
+```
+
+* `for..in` 循环和 `Object.keys()` 方法会忽略 Symbol 属性。
+* `Object.assign()` 方法会同时复制字符串和 Symbol 属性。
+* `Object.getOwnPropertyNames()` 返回对象的常规属性数组，`Object.getOwnPropertySymbols()` 返回对象的 Symbol 属性数组。
+* `Object.getOwnPropertyDescriptors()` 会返回同时包含常规和 Symbol 属性描述符的对象，`Reflect.ownKeys()` 会返回两种类型的键。
+
+``` js
+let obj = {
+  firstName: 'neal',
+  lastName: 'feng',
+  [Symbol('age')]: 20,
+}
+
+for (let key in obj) {
+  console.log(key)
+}
+// "firstName"
+// "lastName"
+
+console.log(Object.keys(obj)) // ["firstName", "lastName"]
+console.log(Object.getOwnPropertyNames(obj)) // ["firstName", "lastName"]
+console.log(Object.getOwnPropertySymbols(obj)) // [Symbol(age)]
+console.log(Object.getOwnPropertyDescriptors(obj)) // {firstName: {…}, lastName: {…}, Symbol(age): {…}}
+console.log(Reflect.ownKeys(obj)) // ["firstName", "lastName", Symbol(age)]
+```
+
+Symbol 属性是对内存中 Symbol 的一个引用，如果没有显式地保存对 Symbol 属性的引用，那么必须遍历对象的所有符号属性才能找到相应的属性键。
+
+``` js
+let obj = {
+  [Symbol('js')]: 'JavaScript',
+  [Symbol('css')]: 'Cascading Style Sheets',
+}
+
+let jsSymbol = Object.getOwnPropertySymbols(obj).find((s) => s.description === 'js')
+console.log(jsSymbol) // Symbol(js)
+```
+
+#### 系统 Symbol
+
+JavaScript 内部有很多“系统” Symbol，用于暴露语言内部行为，我们可以使用它们来微调对象的各个方面。例如 `Symbol.iterator` 返回对象默认的迭代器，由类似 `for-of` 语句的接收可迭代对象的原生语言特性使用，我们可以按需重写某个对象的 `Symbol.iterator` 返回的迭代器。
+
+``` js
+class Double {
+  constructor(params) {
+    this.params = params
+  }
+
+  * [Symbol.iterator]() {
+    yield* this.params.map((v) => v * 2)
+  }
+}
+
+const foo = new Double([1, 2, 3])
+
+for (const element of foo) {
+  console.log(element)
+}
+// 2
+// 4
+// 6
+```
+
+更多“系统” Symbol 请参考[Well-known Symbols](https://tc39.es/ecma262/#sec-well-known-symbols)。
+
+<!-- ### BigInt 类型
+
+BigInt 是一种特殊的数字类型，它提供了对任意长度整数的支持。创建 bigint 的方式有两种：在一个整数字面量后面加 n 或者调用 BigInt 函数，该函数从字符串、数字等中生成 bigint。 -->
