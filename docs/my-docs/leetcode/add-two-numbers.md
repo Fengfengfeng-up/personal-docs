@@ -9,7 +9,7 @@
 你可以假设除了数字 0 之外，这两个数都不会以 0 开头。
 
 * 示例 1：
-  ![示例图](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/01/02/addtwonumber1.jpg)
+  ![示例图](./images/add-two-numbers.jpg)
 
   ``` 
   输入：l1 = [2,4,3], l2 = [5,6,4]
