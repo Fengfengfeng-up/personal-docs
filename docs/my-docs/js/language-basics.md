@@ -264,11 +264,11 @@ test()
 
 ## 数据类型
 
-ECMAScript 有 8 种基本的数据类型，其中包括 7 种原始类型 Undefined、Null、Boolean、Number、String、Symbol（ES6 新增）和 BigInt（ES11 新增），1 种引用类型 Object。
+ECMAScript 有 8 种基本的数据类型，其中包括 Undefined、Null、Boolean、Number、String、Symbol（ES6 新增）和 BigInt（ES11 新增） 7 种原始类型和 Object 引用类型。
 
 ### typeof 操作符
 
-`typeof` 操作符返回参数的类型。对一个值使用 `typeof` 操作符会返回下列字符串之一：
+**typeof** 操作符返回参数的类型。对一个值使用 `typeof` 操作符会返回下列字符串之一：
 
 * `undefined` 表示值未定义；
 * `boolean` 表示值为布尔值；
@@ -281,7 +281,7 @@ ECMAScript 有 8 种基本的数据类型，其中包括 7 种原始类型 Undef
 
 ### Undefined 类型
 
-Undefined 类型只有一个特殊值 `undefined`。当使用 `var` 或 `let` 声明了变量但没有初始化时，就相当于给变量赋予了 `undefined` 值：
+**Undefined** 类型只有一个特殊值 `undefined`。当使用 `var` 或 `let` 声明了变量但没有初始化时，就相当于给变量赋予了 `undefined` 值：
 
 ``` js
 let name
@@ -302,7 +302,7 @@ console.log(typeof age) // "undefined"
 
 ### Null 类型
 
-Null 类型只有一个特殊值 `null`，表示一个空对象指针，通常用以初始化将来要保存对象值的变量。  
+**Null** 类型只有一个特殊值 `null`，表示一个空对象指针，通常用以初始化将来要保存对象值的变量。  
 对值为 `null` 的变量使用 `typeof` 会返回 `object`。
 
 ``` js
@@ -318,7 +318,7 @@ console.log(undefined == null) // true
 
 ### Boolean 类型
 
-Boolean（布尔值）类型仅包含两个值：`true` 和 `false`。  
+**Boolean**（布尔值）类型仅包含两个值：`true` 和 `false`。  
 其他类型的值都可以通过 `Boolean()` 转型函数转为布尔值。`if` 等流控制语句会自动执行其他类型值到布尔值的转换。
 
 ``` js
@@ -342,7 +342,7 @@ if (name) {
 
 ### Number 类型
 
-Number 类型使用 [IEEE 754](http://en.wikipedia.org/wiki/IEEE_754-1985) 格式表示整数和浮点值。  
+**Number** 类型使用 [IEEE 754](http://en.wikipedia.org/wiki/IEEE_754-1985) 格式表示整数和浮点值。  
 
 ``` js
 let num = 18; // 十进制 18
@@ -499,7 +499,7 @@ console.log(parseFloat('10.0')) // 10
 
 ### String 类型
 
-String（字符串）数据类型表示零或多个 16 位 Unicode 字符序列。  
+**String**（字符串）数据类型表示零或多个 16 位 Unicode 字符序列。  
 字符串必须使用双引号（"）、单引号（'）或反引号（`）包起来。
 
 ``` js
@@ -627,7 +627,7 @@ console.log(String.raw`first line\nsecond line`); // "first line\nsecond line"
 
 ### Symbol 类型
 
-Symbol（符号）是 ECMAScript 6 新增的数据类型，用于创建唯一标识符。
+**Symbol**（符号）是 ECMAScript 6 新增的数据类型，用于创建唯一标识符。
 
 #### 基本用法
 
@@ -777,6 +777,69 @@ for (const element of foo) {
 
 更多“系统” Symbol 请参考[Well-known Symbols](https://tc39.es/ecma262/#sec-well-known-symbols)。
 
-<!-- ### BigInt 类型
+### BigInt 类型
 
-BigInt 是一种特殊的数字类型，它提供了对任意长度整数的支持。创建 bigint 的方式有两种：在一个整数字面量后面加 n 或者调用 BigInt 函数，该函数从字符串、数字等中生成 bigint。 -->
+**BigInt** 是一种特殊的数字类型，它可以表示任意大的整数。可以在一个整数字面量后面加 `n` 或者调用 `BigInt()` 函数定义一个 `BigInt`。
+
+``` js
+const bigint1 = 123456789n
+console.log(typeof bigint1) // "bigint"
+
+const bigint2 = BigInt(987654321)
+console.log(typeof bigint2) // "bigint"
+```
+
+`+`（非一元 `+`）、`*`、`-`、`**`、`%`、`==`、`===`、`!`、`!!` 以及除 `>>>`（无符号右移）之外的位操作，这些操作符都可以和 `BigInt` 一起使用，其中带小数的运算会被向零取整。
+
+``` js
+const bigint1 = 3n
+const bigint2 = 2n
+
+console.log(bigint1 + bigint2) // 5n
+console.log(bigint1 - bigint2) // 1n
+console.log(bigint2 - bigint1) // -1n
+console.log(bigint1 * bigint2) // 6n
+console.log(bigint1 / bigint2) // 1n 被向零取整
+console.log(bigint1 ** bigint2) // 9n
+console.log(bigint1 % bigint2) // 1n
+console.log(bigint1 >> bigint2) // 0n
+console.log(bigint1 << bigint2) // 12n
+console.log(0n === 0) // false
+console.log(0n == 0) // true
+console.log(0n || bigint1) // 3n
+console.log(0n && bigint1) // 0n
+console.log(!bigint1) // false
+console.log(!0n) // true
+```
+
+### Object 类型
+
+ECMAScript 中的对象是一组数据和功能的集合。可以通过创建 **Object** 类型的实例来创建对象，每个 Object 实例都有以下属性和方法。
+
+* `constructor`：用于创建当前对象的函数。
+* `hasOwnProperty(propertyName)`：用于判断当前对象实例（非原型）上是否存在给定的属性，传入的属性名必须是字符串或 Symbol。
+* `isPrototypeOf(object)`：用于判断当前对象是否为另一个对象的原型。
+* `propertyIsEnumerable(propertyName)`：用于判断给定的属性是否可以使用 `for-in` 语句枚举。
+* `toString()`：返回对象的字符串表示，该字符串反映对象所在的本地化执行环境。
+* `toLocaleString()`：返回对象的字符串表示。
+* `valueOf()`：返回对象对应的字符串、数值或布尔值表示。
+
+``` js
+const person = new Object()
+person.name = 'neal'
+person.age = 20
+
+const cat = new Object()
+cat.name = 'seven'
+cat.color = 'white'
+
+console.log(person.constructor) // ƒ Object() { [native code] }
+console.log(person.hasOwnProperty('name')) // true
+console.log(person.isPrototypeOf(cat)) // false
+console.log(person.propertyIsEnumerable('age')) // true
+console.log(person.toString()) // [object Object]
+console.log(person.toLocaleString()) // [object Object]
+console.log(person.valueOf()) // {name: "neal", age: 20}
+```
+
+
