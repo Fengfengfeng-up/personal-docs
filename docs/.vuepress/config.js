@@ -1,6 +1,6 @@
 // const { path } = require('@vuepress/shared-utils')
 
-module.exports = ctx => ({
+module.exports = (ctx) => ({
   title: 'Freesims',
   description: '记录个人前端技术成长点滴',
   head: [
@@ -8,7 +8,10 @@ module.exports = ctx => ({
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    [
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+    ],
     ['link', { rel: 'apple-touch-icon', href: `/apple-touch-icon.png` }],
   ],
   themeConfig: {
@@ -31,7 +34,7 @@ module.exports = ctx => ({
       // { text: '收藏', link: '/my-docs/collection/' },
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
     ],
-    sidebar: { 
+    sidebar: {
       '/my-docs/js/': getJsSidebar('基础', '进阶'),
       '/my-docs/library/': getLibSidebar('Vue'),
       '/my-docs/leetcode/': getLeetcodeSidebar('LeetCode刷题'),
@@ -47,11 +50,11 @@ module.exports = ctx => ({
     [
       '@vuepress/google-analytics',
       {
-        'ga': 'G-ELVB952QC9'
-      }
+        ga: 'G-ELVB952QC9',
+      },
     ],
     ['@vuepress/medium-zoom', true],
-    ['flowchart']
+    ['flowchart'],
   ],
   configureWebpack: {
     resolve: {
@@ -62,7 +65,7 @@ module.exports = ctx => ({
   },
 })
 
-function getJsSidebar (groupA, groupB) {
+function getJsSidebar(groupA, groupB) {
   return [
     {
       title: groupA,
@@ -72,7 +75,7 @@ function getJsSidebar (groupA, groupB) {
         'what-is-javascript',
         'javascript-in-html',
         'language-basics',
-      ]
+      ],
     },
     // {
     //   title: groupB,
@@ -84,19 +87,17 @@ function getJsSidebar (groupA, groupB) {
   ]
 }
 
-function getLibSidebar (groupA) {
+function getLibSidebar(groupA) {
   return [
     {
       title: groupA,
       collapsable: false,
-      children: [
-        'vue-juejin-comment',
-      ]
+      children: ['vue-juejin-comment'],
     },
   ]
 }
 
-function getLeetcodeSidebar (groupA) {
+function getLeetcodeSidebar(groupA) {
   return [
     {
       title: groupA,
@@ -105,9 +106,9 @@ function getLeetcodeSidebar (groupA) {
         '',
         'two-sum',
         'add-two-numbers',
-        'longest-substring-without-repeating-characters'
-        // 'median-of-two-sorted-arrays',
-      ]
+        'longest-substring-without-repeating-characters',
+        'median-of-two-sorted-arrays',
+      ],
     },
   ]
 }
