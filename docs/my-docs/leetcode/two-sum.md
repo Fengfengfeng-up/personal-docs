@@ -32,8 +32,8 @@
 
 * 提示：
   * `2 <= nums.length <= 103`
-  * `-10e9 <= nums[i] <= 10e9`
-  * `-10e9 <= target <= 10e9`
+  * `-10^9 <= nums[i] <= 10^9`
+  * `-10^9 <= target <= 10^9`
   * 只会存在一个有效答案
 
 力扣🔗：<https://leetcode-cn.com/problems/two-sum>
