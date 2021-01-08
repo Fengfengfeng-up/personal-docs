@@ -430,7 +430,7 @@ console.log(isNaN('hi')) // true，不可以转换为数值
 console.log(isNaN(true)) // false，可以转换为数值 1
 ```
 
-使用 `Number.isNaN()` 工具函数（ES6新增）也可以判断一个值是否是 `NaN`，仅当传入值为 `NaN` 时才返回 `true`。
+使用 `Number.isNaN()` 工具函数（ES6 新增）也可以判断一个值是否是 `NaN`，仅当传入值为 `NaN` 时才返回 `true`。
 
 ``` js
 console.log(Number.isNaN(NaN)) // true
@@ -857,4 +857,81 @@ console.log(person.toLocaleString()) // [object Object]
 console.log(person.valueOf()) // {name: "neal", age: 20}
 ```
 
+## 操作符
 
+### 一元操作符
+
+#### `++`（递增） 和 `--`（递减）操作符
+
+前缀版 `++` 和  `--` 位于变量前面，变量值在语句被求值之前改变。
+
+``` js
+let a = 1
+console.log(++a + 1) // 3
+console.log(a) // 2
+console.log(--a + 1) // 2
+```
+
+后缀版 `++` 和 `--` 位于变量后面，变量值在语句被求值之后改变。
+
+``` js
+let b = 1
+console.log(b++ + 1) // 2
+console.log(b) // 2
+console.log(b-- + 1) // 3
+console.log(b) // 1
+```
+
+`++` 和 `--` 操作符可以作用于任何值，如果该值是非数值，将会发生隐式数值转换，其遵循如下规则。
+
+* 对于字符串，则转换为数值再应用改变。
+* 对于布尔值，如果是 `false`，则转换为 `0`，如果是 `true`，则转换为 `1`，再应用改变。
+* 对于数值，加 `1` 或减 `1`。
+* 如果是对象，则调用其 `valueOf()` 方法取得可以操作的值再应用上述规则，如果得到的值是 `NaN`，则调用 `toString()` 并再次应用上述规则。
+
+``` js
+let a = 1
+let b = '1'
+let c = '1.2'
+let d = true
+let e = {
+  valueOf() {
+    return 1
+  }
+}
+
+console.log(a++) // 1
+console.log(a) // 2
+console.log(b--) // 1 
+console.log(b) // 0
+console.log(c++) // 1.2
+console.log(c) // 2.2
+console.log(d++) // 1
+console.log(d) // 2
+console.log(e--) // 1 
+console.log(e) // 0
+```
+
+#### `+`(一元加)和 `-`(一元减)
+
+一元加放在变量前面，对数值没有任何影响，对非数值会与使用 `Number()` 转型函数一样的类型转换。
+
+一元减遇到数值时会将其转成相应的负值，遇到非数值时会遵循与一元加同样的规则，转换后再取负值。
+
+``` js
+const a = +1
+const b = +'f'
+const c = -'2'
+const d = -{
+  valueOf() {
+    return 1
+  }
+}
+
+console.log(a) // 1
+console.log(b) // NaN
+console.log(c) // -2
+console.log(d) // -1
+```
+
+### 位操作符
