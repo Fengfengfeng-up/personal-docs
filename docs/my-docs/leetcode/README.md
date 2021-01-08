@@ -17,3 +17,4 @@
 2. [两数相加](./add-two-numbers.md)
 3. [无重复字符的最长子串](./longest-substring-without-repeating-characters.md)
 4. [寻找两个正序数组的中位数](./median-of-two-sorted-arrays.md)
+5. [最长回文子串](./longest-palindromic-substring.md)

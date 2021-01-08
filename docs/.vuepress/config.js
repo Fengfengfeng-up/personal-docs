@@ -1,4 +1,4 @@
-// const { path } = require('@vuepress/shared-utils')
+const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = (ctx) => ({
   title: 'Freesims',
@@ -108,6 +108,7 @@ function getLeetcodeSidebar(groupA) {
         'add-two-numbers',
         'longest-substring-without-repeating-characters',
         'median-of-two-sorted-arrays',
+        'longest-palindromic-substring',
       ],
     },
   ]
