@@ -300,6 +300,14 @@ console.log(typeof age) // "undefined"
 在使用 `var` 或 `let` 声明变量时，同时进行初始化，这样当使用 `typeof` 返回 `undefined` 时，就可以确定这个变量是没有声明过的。
 :::
 
+使用 `void` 运算符可以得到 `undefined` 值。
+
+``` js
+console.log(void 0) // undefined
+console.log(void true) // undefined
+console.log(void 0 === undefined) // true
+```
+
 ### Null 类型
 
 **Null** 类型只有一个特殊值 `null`，表示一个空对象指针，通常用以初始化将来要保存对象值的变量。  
@@ -420,6 +428,13 @@ console.log(isNaN(1)) // false
 console.log(isNaN('2')) // false，可以转换为数值 2
 console.log(isNaN('hi')) // true，不可以转换为数值
 console.log(isNaN(true)) // false，可以转换为数值 1
+```
+
+使用 `Number.isNaN()` 工具函数（ES6新增）也可以判断一个值是否是 `NaN`，仅当传入值为 `NaN` 时才返回 `true`。
+
+``` js
+console.log(Number.isNaN(NaN)) // true
+console.log(Number.isNaN('hi')) // false
 ```
 
 #### 数值转换
