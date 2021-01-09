@@ -109,6 +109,7 @@ function getLeetcodeSidebar(groupA) {
         'longest-substring-without-repeating-characters',
         'median-of-two-sorted-arrays',
         'longest-palindromic-substring',
+        'zigzag-conversion'
       ],
     },
   ]
