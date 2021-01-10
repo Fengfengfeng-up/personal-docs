@@ -19,3 +19,4 @@
 4. [寻找两个正序数组的中位数](./median-of-two-sorted-arrays.md)
 5. [最长回文子串](./longest-palindromic-substring.md)
 6. [Z 字形变换](./zigzag-conversion.md)
+7. [整数反转](./reverse-integer.md)
