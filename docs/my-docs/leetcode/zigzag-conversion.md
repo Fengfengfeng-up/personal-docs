@@ -62,4 +62,4 @@ string convert(string s, int numRows);
 
 ## 代码实现
 
-<<< leet-code/zigzag-conversion.js
+<<< docs/my-docs/leetcode/code/6.zigzag-conversion.js

@@ -46,4 +46,4 @@
 
 ## 代码实现
 
-<<< leet-code/two-sum.js
+<<< docs/my-docs/leetcode/code/1.two-sum.js

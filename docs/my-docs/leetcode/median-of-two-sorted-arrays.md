@@ -63,4 +63,4 @@ PS: 果然难度为 **困难** 的题并没有想象那么简单，对于刚刚�
 
 ## 代码实现
 
-<<< leet-code/median-of-two-sorted-arrays.js
+<<< docs/my-docs/leetcode/code/4.median-of-two-sorted-arrays.js

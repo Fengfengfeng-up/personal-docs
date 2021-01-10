@@ -48,4 +48,4 @@ PS：😫果真又是令人痛苦面具的一题，动态规划、中心扩散�
 
 ## 代码实现
 
-<<< leet-code/longest-palindromic-substring.js
+<<< docs/my-docs/leetcode/code/5.longest-palindromic-substring.js

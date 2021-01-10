@@ -37,7 +37,7 @@ module.exports = (ctx) => ({
     sidebar: {
       '/my-docs/js/': getJsSidebar('基础', '进阶'),
       '/my-docs/library/': getLibSidebar('Vue'),
-      '/my-docs/leetcode/': getLeetcodeSidebar('LeetCode刷题'),
+      '/my-docs/leetcode/': getLeetCodeSidebar('LeetCode刷题'),
     },
     lastUpdated: '上次更新',
   },
@@ -97,20 +97,16 @@ function getLibSidebar(groupA) {
   ]
 }
 
-function getLeetcodeSidebar(groupA) {
+const LeetCodeFiles = fs
+  .readdirSync(path.resolve(__dirname, '../my-docs/leetcode/code/'))
+  .map((f) => f.slice(f.indexOf('.') + 1, -3))
+LeetCodeFiles.unshift('')
+function getLeetCodeSidebar(groupA) {
   return [
     {
       title: groupA,
       collapsable: false,
-      children: [
-        '',
-        'two-sum',
-        'add-two-numbers',
-        'longest-substring-without-repeating-characters',
-        'median-of-two-sorted-arrays',
-        'longest-palindromic-substring',
-        'zigzag-conversion'
-      ],
+      children: LeetCodeFiles,
     },
   ]
 }
