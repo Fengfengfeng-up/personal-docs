@@ -1,7 +1,7 @@
 const { fs, path } = require('@vuepress/shared-utils')
 
 module.exports = (ctx) => ({
-  title: 'Freesims',
+  title: 'Freeisms',
   description: '记录个人前端技术成长点滴',
   head: [
     ['link', { rel: 'icon', href: `/favicon.ico` }],
