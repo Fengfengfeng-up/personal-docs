@@ -29,7 +29,7 @@ module.exports = (ctx) => ({
       // { text: 'Vue', link: '/my-docs/vue/' },
       // { text: 'Webpack', link: '/my-docs/webpack/' },
       // { text: 'NestJs', link: '/my-docs/nestjs/' },
-      { text: 'LeetCode刷题', link: '/my-docs/leetcode/' },
+      { text: 'LeetCode', link: '/my-docs/leetcode/' },
       { text: '开源库', link: '/my-docs/library/vue-juejin-comment.html' },
       // { text: '收藏', link: '/my-docs/collection/' },
       { text: '博客', link: 'https://www.striveforus.com/', target: '_blank' },
@@ -37,7 +37,7 @@ module.exports = (ctx) => ({
     sidebar: {
       '/my-docs/js/': getJsSidebar('基础', '进阶'),
       '/my-docs/library/': getLibSidebar('Vue'),
-      '/my-docs/leetcode/': getLeetCodeSidebar('LeetCode刷题'),
+      '/my-docs/leetcode/': getLeetCodeSidebar('LeetCode'),
     },
     lastUpdated: '上次更新',
   },
