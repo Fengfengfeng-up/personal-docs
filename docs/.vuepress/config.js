@@ -29,6 +29,7 @@ module.exports = (ctx) => ({
       // { text: 'Vue', link: '/my-docs/vue/' },
       // { text: 'Webpack', link: '/my-docs/webpack/' },
       // { text: 'NestJs', link: '/my-docs/nestjs/' },
+      { text: '设计模式', link: '/my-docs/design-pattern/' },
       { text: 'LeetCode', link: '/my-docs/leetcode/' },
       { text: '开源库', link: '/my-docs/library/vue-juejin-comment.html' },
       // { text: '收藏', link: '/my-docs/collection/' },
@@ -38,6 +39,7 @@ module.exports = (ctx) => ({
       '/my-docs/js/': getJsSidebar('基础', '进阶'),
       '/my-docs/library/': getLibSidebar('Vue'),
       '/my-docs/leetcode/': getLeetCodeSidebar('LeetCode'),
+      '/my-docs/design-pattern/': getDesignPatternSidebar('设计模式'),
     },
     lastUpdated: '上次更新',
   },
@@ -109,6 +111,19 @@ function getLeetCodeSidebar(groupA) {
       title: groupA,
       collapsable: false,
       children: LeetCodeFiles,
+    },
+  ]
+}
+
+function getDesignPatternSidebar(groupA) {
+  return [
+    {
+      title: groupA,
+      collapsable: false,
+      children: [
+        '',
+        // 'singleton'
+      ],
     },
   ]
 }
