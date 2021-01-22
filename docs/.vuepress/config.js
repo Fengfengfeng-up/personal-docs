@@ -122,7 +122,8 @@ function getDesignPatternSidebar(groupA) {
       collapsable: false,
       children: [
         '',
-        'singleton'
+        'singleton',
+        'strategy'
       ],
     },
   ]
