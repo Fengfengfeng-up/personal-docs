@@ -123,7 +123,8 @@ function getDesignPatternSidebar(groupA) {
       children: [
         '',
         'singleton',
-        'strategy'
+        'strategy',
+        'proxy'
       ],
     },
   ]
