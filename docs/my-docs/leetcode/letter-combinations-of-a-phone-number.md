@@ -8,7 +8,7 @@
 
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 
-![phone-number](./images/letter-combinations-of-a-phone-number.png)
+![PhoneNumber](./images/letter-combinations-of-a-phone-number.png)
 
 **示例：**
 
