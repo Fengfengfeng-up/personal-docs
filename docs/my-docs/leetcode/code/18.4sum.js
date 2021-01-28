@@ -48,26 +48,3 @@ function fourSum(nums, target) {
   }
   return result
 }
-
-Function.prototype._call = function(context, ...args) {
-  var context = context || window
-  context.fn = this
-  // var result = eval('context.fn(...args)')
-  var result = context.fn(...args)
-  delete context.fn
-  return result
-}
-
-const obj = {
-  a: 1,
-  b: '2',
-}
-
-function getSum() {
-  if (typeof this.a !== 'number' || typeof this.b !== 'number') {
-    throw new Error('param is not a number')
-  }
-  return this.a + this.b
-}
-
-console.log(getSum._call(obj))
