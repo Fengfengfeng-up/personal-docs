@@ -13,3 +13,4 @@
 1. [单例模式](./singleton.md)
 2. [策略模式](./strategy.md)
 3. [代理模式](./proxy.md)
+4. [迭代器模式](./iterator.md)
