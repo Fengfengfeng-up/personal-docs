@@ -32,3 +32,4 @@
 17. [电话号码的字母组合](./letter-combinations-of-a-phone-number.md)
 18. [四数之和](./4sum.md)
 19. [删除链表的倒数第 N 个结点](./remove-nth-node-from-end-of-list.md)
+20. [有效的括号](./valid-parentheses.md)
