@@ -34,3 +34,4 @@
 19. [删除链表的倒数第 N 个结点](./remove-nth-node-from-end-of-list.md)
 20. [有效的括号](./valid-parentheses.md)
 21. [合并两个有序链表](./merge-two-sorted-lists.md)
+22. [括号生成](./generate-parentheses.md)

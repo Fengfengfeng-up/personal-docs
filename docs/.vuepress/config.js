@@ -98,7 +98,6 @@ function getLibSidebar(groupA) {
     },
   ]
 }
-
 const LeetCodeFiles = fs
   .readdirSync(path.resolve(__dirname, '../my-docs/leetcode/code/'))
   .sort((a, b) => a.slice(0, a.indexOf('.')) - b.slice(0, b.indexOf('.')))
