@@ -125,7 +125,8 @@ function getDesignPatternSidebar(groupA) {
         'singleton',
         'strategy',
         'proxy',
-        'iterator'
+        'iterator',
+        'pub-sub'
       ],
     },
   ]
