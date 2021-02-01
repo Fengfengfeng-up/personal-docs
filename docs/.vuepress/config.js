@@ -125,7 +125,8 @@ function getDesignPatternSidebar(groupA) {
         'strategy',
         'proxy',
         'iterator',
-        'pub-sub'
+        'pub-sub',
+        'command'
       ],
     },
   ]
