@@ -6,7 +6,7 @@ function generateParenthesis(n) {
   const result = []
 
   /**
-   * @param {string} str 当前调用栈的括号字符串
+   * @param {string} str 当前的括号字符串
    * @param {number} left str 中左括号个数
    * @param {number} right str 中右括号个数
    */
