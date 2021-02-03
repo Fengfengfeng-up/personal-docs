@@ -56,17 +56,25 @@ event.fire('sleep')
 ```js
 class Events {
   constructor() {
-    this.clients = {} // 存放事件以及每种事件对应的回调函数对象
-    this.onceList = [] // 存放单次订阅的回调函数
+    this.clients = {} // 存放事件类型以及对应的订阅者列表
+  }
+
+  // 静态方法，增加订阅者
+  static addListener(type, listener) {
+    if (!this.clients[type]) {
+      this.clients[type] = new Map()
+    }
+
+    const { origin, ...rest } = listener
+    this.clients[type].set(origin, rest)
   }
 
   // 订阅
   on(type, fn, ...args) {
-    if (!this.clients[type]) {
-      this.clients[type] = new Map()
-    }
-  
-    this.clients[type].set(fn, fn.bind(this, ...args))
+    Events.addListener.call(this, type, {
+      origin: fn,
+      bindFn: fn.bind(this, ...args),
+    })
   }
 
   // 触发（发布）
@@ -74,13 +82,11 @@ class Events {
     const clients = this.clients[type]
     if (!clients || clients.size === 0) return false
 
-    for (const [fn, bindFn] of clients) {
+    for (const [origin, { bindFn, once }] of clients) {
       bindFn.apply(null, args)
-      const index = this.onceList.indexOf(fn)
 
-      if (index > -1) {
-        this.onceList.splice(index, 1)
-        clients.delete(fn)
+      if (once) {
+        clients.delete(origin)
       }
     }
   }
@@ -95,10 +101,11 @@ class Events {
 
   // 单次订阅（只触发一次）
   once(type, fn, ...args) {
-    if (this.onceList.includes(fn)) return false
-
-    this.onceList.push(fn)
-    this.on(...arguments)
+    Events.addListener.call(this, type, {
+      origin: fn,
+      bindFn: fn.bind(this, ...args),
+      once: true,
+    })
   }
 }
 ```
