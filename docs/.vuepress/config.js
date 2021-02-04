@@ -126,7 +126,8 @@ function getDesignPatternSidebar(groupA) {
         'proxy',
         'iterator',
         'pub-sub',
-        'command'
+        'command',
+        'composite'
       ],
     },
   ]
