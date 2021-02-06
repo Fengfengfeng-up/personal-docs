@@ -39,3 +39,4 @@
 24. [两两交换链表中的节点](./swap-nodes-in-pairs.md)
 25. [K 个一组翻转链表](./reverse-nodes-in-k-group.md)
 26. [删除排序数组中的重复项](./remove-duplicates-from-sorted-array.md)
+27. [移除元素](./remove-element.md)
