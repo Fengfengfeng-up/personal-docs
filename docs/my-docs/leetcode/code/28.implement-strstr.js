@@ -3,7 +3,7 @@
  * @param {string} needle
  * @return {number}
  */
-var strStr = function(haystack, needle) {
+function strStr(haystack, needle) {
   if (needle === '') return 0
 
   let index1 = 0
