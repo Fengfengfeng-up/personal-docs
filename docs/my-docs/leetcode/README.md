@@ -42,3 +42,4 @@
 27. [移除元素](./remove-element.md)
 28. [实现 strStr()](./implement-strstr.md)
 29. [两数相除](./divide-two-integers.md)
+30. [串联所有单词的子串](./substring-with-concatenation-of-all-words.md)
