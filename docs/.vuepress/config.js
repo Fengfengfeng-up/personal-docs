@@ -127,7 +127,8 @@ function getDesignPatternSidebar(groupA) {
         'iterator',
         'pub-sub',
         'command',
-        'composite'
+        'composite',
+        'template-method'
       ],
     },
   ]

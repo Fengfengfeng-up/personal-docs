@@ -16,3 +16,4 @@
 4. [迭代器模式](./iterator.md)
 5. [发布—订阅模式](./pub-sub.md)
 6. [命令模式](./command.md)
+7. [模板方法模式](./template-method.md)
