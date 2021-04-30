@@ -2,7 +2,7 @@
 
 一个[掘金](https://juejin.im/timeline)风格的**评论组件**✍。  
 
-GitHub 地址：<https://github.com/Fengfengfeng-up/vue-comment-component/tree/main>
+GitHub 地址：<https://github.com/fenhan34/vue-comment-component/tree/main>
 
 ## 功能
 
@@ -14,10 +14,10 @@ GitHub 地址：<https://github.com/Fengfengfeng-up/vue-comment-component/tree/m
 ## 安装
 
 ``` shell
-npm install @fengfengfeng/vue-juejin-comment
+npm install vue-juejin-comment
 
 # or yarn
-yarn add @fengfengfeng/vue-juejin-comment
+yarn add vue-juejin-comment
 ```
 
 ## 使用
@@ -36,8 +36,7 @@ yarn add @fengfengfeng/vue-juejin-comment
 </template>
 
 <script>
-import Comment from '@fengfengfeng/vue-juejin-comment'
-import '@fengfengfeng/vue-juejin-comment/dist/vue-juejin-comment.css'
+import Comment from 'vue-juejin-comment'
 
 export default {
   data() {
@@ -93,8 +92,8 @@ export default {
 </template>
 
 <script>
-import Comment from '@fengfengfeng/vue-juejin-comment'
-import '@fengfengfeng/vue-juejin-comment/dist/vue-juejin-comment.css'
+import Comment from 'vue-juejin-comment'
+import 'vue-juejin-comment/dist/vue-juejin-comment.css'
 
 export default {
   components: { Comment },
